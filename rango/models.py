@@ -6,6 +6,10 @@ class Category(models.Model):
     views = models.IntegerField(default=0)
     likes = models.IntegerField(default=0)
     slug = models.SlugField(unique=True)
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 05714ad9570c79b64b9122441729e0f79b10a343
     class Meta:
         verbose_name_plural = 'Categories'
 
