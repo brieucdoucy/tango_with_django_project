@@ -1,26 +1,15 @@
-<!DOCTYPE html>
-{% load staticfiles %} <!-- New line -->
-<html>
-	<head>
-		<title>Rango</title>
-	</head>
+{% extends 'rango/base.html' %}
+{% load staticfiles %}
 
-	<body>
-		<h1>Rango says...</h1>
-		<div>
-			hey there partner! <br />
-			this is the about page<br />
-			<strong>{{ boldmessage }}</strong><br />
-		</div>
-		<div>
-			<a href="/rango/">index</a><br />
-			<img src="{% static 'images/cat.jpg' %}"
-                        	alt="Picture of Rango" /> <!-- New line -->
-<<<<<<< HEAD
-			<img /> tag like <img src="{{ MEDIA_URL }}wcat.jpg" alt="Picture of a Cat."/
-=======
-			<img /> tag like <img src="{{ MEDIA_URL }}wcat.jpg" alt="Picture of a Cat."/>
->>>>>>> 05714ad9570c79b64b9122441729e0f79b10a343
-		</div>
-	</body>
-</html>
+{% block title_block %}
+About Rango
+{% endblock %}
+
+{% block body_block %}
+	<h1>Rango says...</h1>
+	hey there partner! <br />
+	this is the about page<br />
+	<strong>{{ boldmessage }}</strong><br />
+	<img src="{% static 'images/cat.jpg' %}"alt="Picture of Rango" /> 
+	<img /> tag like <img src="{{ MEDIA_URL }}wcat.jpg" alt="Picture of a Cat."/>
+{% endblock %}
